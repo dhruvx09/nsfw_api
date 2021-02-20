@@ -83,7 +83,7 @@ def classify_from_url(image_entry, nsfw_net):
         result = {'error_code': e.code, 'error_reason': e.reason}
     except urllib.URLError as e:
         result = {'error_code': 500, 'error_reason': str(e.reason)}
-    except Exception, e:
+    except Exception as e:
         result = {'error_code': 500, 'error_reason': e.message}
 
 
