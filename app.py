@@ -1,6 +1,6 @@
 from flask import Flask, request, Response, jsonify
 import json
-import urllib2
+import urllib
 import caffe
 import contextlib
 import numpy as np
