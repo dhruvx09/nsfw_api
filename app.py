@@ -75,13 +75,13 @@ def classify_from_url(image_entry, nsfw_net):
     headers = {'User-agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5'}
 
     try:
-        req = urllib2.Request(image_entry["url"], None, headers)
+        req = urllib.Request(image_entry["url"], None, headers)
         with contextlib.closing(urllib2.urlopen(req)) as stream:
             score = classify(stream.read(), nsfw_net)
             result = {'score': score}
-    except urllib2.HTTPError e:
+    except urllib.HTTPError as e:
         result = {'error_code': e.code, 'error_reason': e.reason}
-    except urllib2.URLError e:
+    except urllib.URLError as e:
         result = {'error_code': 500, 'error_reason': str(e.reason)}
     except Exception, e:
         result = {'error_code': 500, 'error_reason': e.message}
