@@ -3,4 +3,3 @@ Flask
 Jinja2
 Werkzeug
 gevent
-open_nsfw
