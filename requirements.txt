@@ -3,4 +3,3 @@ Flask
 Jinja2
 Werkzeug
 gevent
-python3 -c 'import caffe,cv'
