@@ -3,4 +3,4 @@ Flask
 Jinja2
 Werkzeug
 gevent
-caffe2
+caffe-cpu
