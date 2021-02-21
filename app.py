@@ -1,6 +1,6 @@
 from flask import Flask, request, Response, jsonify
 import json
-import caffe2
+import caffe
 import contextlib
 import numpy as np
 import classify_nsfw
