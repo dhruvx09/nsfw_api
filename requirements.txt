@@ -3,4 +3,4 @@ Flask
 Jinja2
 Werkzeug
 gevent
-caffe-cpu
+python3 -c 'import caffe,cv'
